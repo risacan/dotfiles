@@ -3,10 +3,10 @@
 > https://wiki.debian.org/iwlwifi
 
 ## non-freeレポジトリ追加
-```/etc/apt/sources.list
-  GNU nano 2.2.6              File: /etc/apt/sources.list                        Modified  
+`nano /etc/apt/sources.list`
 
-# 
+```
+#
 
 # deb cdrom:[Debian GNU/Linux 7.5.0 _Wheezy_ - Official amd64 NETINST Binary-1 20140426-13$
 
@@ -39,7 +39,53 @@ $ sudo modprobe -r iwlwifi
 $ sudo modprobe iwlwifi
 ```
 
-# gitインストール
+# gitセットアップ
 
-# dotfiles
+## gitインストール
+```bash
+$ sudo aptitude install git-core
+```
+
+## git設定
+$ git config --global user.name "nownabe"
+$ git config --global user.email "nownabe@gmail.com"
+$ git config --global core.editor vim
+$ git config --global core.diff auto
+$ git config --global core.branch auto
+$ git config --global core.status auto
+```
+
+## SSH鍵作成
+```bash
+$ ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa
+```
+
+## .ssh/config作成
+`$ nano ~/.ssh/config`
+
+```
+Host github.com
+  User git
+```
+
+# dotfilesセットアップ
+```
+$ git clone git://github.com/nownabe/dotfiles.git ~/.dotfiles
+$ ~/.dotfiles/setup.sh
+```
+
+# Zshセットアップ
+
+## Zshインストール
+```bash
+$ sudo aptitude install zsh
+```
+
+## 標準シェル切り替え
+```bash
+$ which zsh
+/usr/bin/zsh
+$ chsh -s /usr/bin/zsh
+```
+
 
