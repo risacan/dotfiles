@@ -47,6 +47,7 @@ $ sudo aptitude install git-core
 ```
 
 ## git設定
+```bash
 $ git config --global user.name "nownabe"
 $ git config --global user.email "nownabe@gmail.com"
 $ git config --global core.editor vim
