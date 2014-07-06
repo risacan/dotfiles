@@ -48,12 +48,9 @@ $ sudo aptitude install git-core
 
 ## git設定
 ```bash
-$ git config --global user.name "nownabe"
-$ git config --global user.email "nownabe@gmail.com"
-$ git config --global core.editor vim
-$ git config --global core.diff auto
-$ git config --global core.branch auto
-$ git config --global core.status auto
+$ git config --global user.name "username"
+$ git config --global user.email "email"
+$ git config --global color.ui true
 ```
 
 ## SSH鍵作成
