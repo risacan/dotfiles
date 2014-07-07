@@ -19,6 +19,7 @@ install readline
 install openssl
 install rbenv
 install --HEAD ruby-build
+install wget
  
 # homebrew-caskのインストール
 tap phinze/homebrew-cask
