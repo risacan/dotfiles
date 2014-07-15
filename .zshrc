@@ -1,5 +1,9 @@
 source ~/.zshenv
 fpath=(/usr/local/share/zsh-completions $fpath)
+
+if [ ! -d ~/.zsh ]; then
+  mkdir -p ~/.zsh
+fi
  
 ## 補完機能を有効化
 autoload -Uz compinit
@@ -56,14 +60,31 @@ setopt correct
 ## 全履歴の表示
 function history-all { history -E 1 }
  
+## Dircolors
+################
+if [ ! -d ~/.zsh/dircolors-solarized ]; then
+  git clone git://github.com/seebi/dircolors-solarized ~/.zsh/dircolors-solarized
+fi
+
+case ${OSTYPE} in
+linux*)
+  eval $(dircolors ~/.zsh/dircolors-solarized/dircolors.ansi-universal) ;;
+darwin*)
+  eval $(gdircolors ~/.zsh/dircolors-solarized/dircolors.ansi-universal) ;;
+esac
+
+if [ -n "${LS_COLORS}" ]; then
+  zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+fi
+
 ## Aliases
 ################
  
 case ${OSTYPE} in
 linux*)
-alias ls='ls --color' ;;
+  alias ls='ls --color' ;;
 darwin*)
-alias ls='ls -G' ;;
+  alias ls='gls --color' ;;
 esac
  
 alias la='ls -a'
