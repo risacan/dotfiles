@@ -16,19 +16,41 @@
   - スペースを最大まで拡大
 - キーボード
   - 『F1、F2などの…』にチェック
+- 共有
+  - コンピュータ名を編集  
 
 # ソフトウェア・アップデート
 アップデートする。
 
-# ソフトウェアインストール
-- chromeインストール
-- Aviraインストール
-- iTerm2インストール
-- sublime text 2インストール
-
 # Dotfiles
+## SSH設定
+ターミナルを開く
+`Finder > アプリケーション > ユーティリティ > ターミナル`
+
+### SSH鍵ペア作成
 ```bash
-$ git clone git://github.com/nownabe/dotfiles.git ~/.dotfiles
+$ ssh-keygen -t rsa -b 4096
+```
+
+### SSH鍵をgithubに登録
+```bash
+$ cat .ssh/id_rsa.pub
+```
+
+### github.comの設定・確認
+```bash
+$ cat <<EOF > .ssh/config
+Host github.com
+  User git
+EOF
+$ ssh github.com
+```
+
+## Dotfilesセットアップ
+git使おうとするとなんたらかんたらみたいなのが出てくるのでインストール
+
+```bash
+$ git clone ssh://github.com/nownabe/dotfiles.git ~/.dotfiles
 $ ~/.dotfiles/setup.sh
 ```
 
@@ -42,8 +64,25 @@ $ ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 
 ## brew bundle
 ```bash
-$ brew bundle
+$ .dotfiles/brew.sh
 ```
+
+## 再起動
+1回再起動する
+
+# インストールしたアプリケーションの設定
+## 
+
+
+## Alfread 2
+```bash
+$ open "~/Applications/Alfread 2.app"
+```
+
+次以降のアプリはAlfreadから起動する。
+Alfreadは`Alt + Space`で起動。
+
+## 
 
 # Ruby
 
