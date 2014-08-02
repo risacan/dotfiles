@@ -71,7 +71,8 @@ $ .dotfiles/brew.sh
 1回再起動する
 
 # インストールしたアプリケーションの設定
-## 
+
+
 
 
 ## Alfread 2
@@ -82,7 +83,44 @@ $ open "~/Applications/Alfread 2.app"
 次以降のアプリはAlfreadから起動する。
 Alfreadは`Alt + Space`で起動。
 
-## 
+## Google IME
+環境設定を開く。
+
+- 『一般』タブ
+  - スペースの入力：半角
+  - キー設定の選択：ATOK
+- 『入力補助』
+  - 『アルファベット』の変換前文字列を『半角』に
+  - 『数字』の変換前文字列を『半角』に
+
+システム環境設定で入力ソースからことえりを削除してGoogle IMEを追加する。
+`Ctrl + Shift + j`で日本語入力、`Ctrl + Shift + ;`で英数入力に切り替えられる。
+
+## Clipmenu
+起動時に起動する。
+
+## HyperSwitch
+起動時に起動する。
+Activate the window switcher forのところのチェックは外しておく。
+あとは適当に。
+
+## BetterTouchTool
+- Window Snappingを有効にする
+- AdvancedのMouseからMiddleクリックを調整する
+
+## XtraFinder
+- 『タブ』タブ
+  - 『タブ』にチェック
+- 『機能』タブ
+  - 『カット＆ペースト』にチェック
+  - 『フォルダを先頭に配置』にチェック
+  - 『アイコン表示で項目を名前で整頓』にチェック
+  - 『中央クリックでフォルダを新規ウィンドウまたは新規タブで開く』にチェック
+  - 『で戻るでゴミ箱に入れる』にチェック
+  - 『リスト表示時にフォルダの項目数を表示』にチェック
+  - 『常にツールバーを表示』にチェック
+  - 『”上に移動”ボタンをツールバーに追加』にチェック
+  - 『XtraFinderの機能をツールバーに追加』にチェック
 
 # Ruby
 
@@ -90,7 +128,8 @@ Alfreadは`Alt + Space`で起動。
 ```bash
 $ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 $ rbenv install 2.0.0-p353
-$ rbenv global 2.0.0-p353
+$ rbenv install 2.1.2
+$ rbenv global 2.1.2
 $ gem install bundle
 $ rbenv rehash
 ```
@@ -108,10 +147,3 @@ $ chsh -s /usr/local/bin/zsh
 > 少し凝ったzshrc https://gist.github.com/mollifier/4979906
 > .zshrcで見かけるautoloadの意味と使い方 http://qiita.com/yuku_t/items/77c23390e52168a2754a
 > [Mac OS X] Homebrewでzshを導入する http://www.d-wood.com/blog/2014/03/14_5816.html
-
-# Google IMEインストール
-> http://www.google.co.jp/ime/
-
-右上のアイコンで英数（Google）とひらがな（Google）を1回ずつ選べば、キーボードの「英数」と「かな」でGoogleIMEが選ばれるようになる。
-
-# TODO
