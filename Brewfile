@@ -7,6 +7,7 @@ upgrade
 ## packageのインストール
 install jq # JSON Parser
 install byobu # Multiplexer
+install parallel
  
 ## Zsh
 install zsh --disable-etcdir
