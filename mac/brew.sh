@@ -27,7 +27,9 @@ brew install zsh-completions
 brew install openssl libyaml libffi
 
 # packages
+brew install ansible
 brew install jq
+brew install tree
 
 # Cask
 brew tap phinze/homebrew-cask
