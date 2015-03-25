@@ -13,9 +13,12 @@ autoload -Uz colors
 colors
  
 ## Prompt
-PROMPT="[%{${fg[green]}%}%n%{${reset_color}%}@%{${fg[cyan]}%}%m%{${reset_color}%}] %~
-%# "
- 
+#PROMPT="[%{${fg[green]}%}%n%{${reset_color}%}@%{${fg[cyan]}%}%m%{${reset_color}%}] %~
+#%# "
+#PROMPT="%{${fg[gray]}%}(・8・)%{${reset_color}%} "
+prompt_content="＞ω ＜/"
+PROMPT=$'%{\e[38;5;227m%}'$prompt_content$'%{\e[m%} '
+
 ## History
 HISTFILE=~/.zsh_history
 HISTSIZE=1000000
