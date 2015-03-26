@@ -2,7 +2,9 @@
 
 set -x
 
-for file in $(ls ${HOME}/dotfiles/common/dotfiles)
+dotfiles_dir=${HOME}/dotfiles/common/dotfiles
+
+for file in $(ls ${dotfiles_dir})
 do
   ln -s ${dotfiles_dir}/${file} ${HOME}/.${file}
 done

@@ -2,7 +2,7 @@
 
 set -eux
 
-brew udate
+brew update
 
 outdated=`brew outdated`
 if [ -n "$outdated" ]; then
@@ -37,9 +37,9 @@ brew install brew-cask
 
 brew cask install appcleaner
 brew cask install clipmenu
-brew cask install keyremap4macbook
+#brew cask install keyremap4macbook
 brew cask install bettertouchtool
-brew cask install virtualbox
+#brew cask install virtualbox
 brew cask install vagrant
 brew cask install xtrafinder
 brew cask install skype

@@ -3,10 +3,14 @@
 set -eux
 
 # Install Command Line Tools for Xcode
-xcode-select --install
+set +e
+xcode-select -v || xcode-select --install
+set -e
 
 # Install Homebrew
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+set +e
+brew -v || ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+set -e
 
 # Install Homebrew packages
 ${HOME}/dotfiles/mac/brew.sh
