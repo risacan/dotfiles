@@ -16,8 +16,10 @@ colors
 #PROMPT="[%{${fg[green]}%}%n%{${reset_color}%}@%{${fg[cyan]}%}%m%{${reset_color}%}] %~
 #%# "
 #PROMPT="%{${fg[gray]}%}(・8・)%{${reset_color}%} "
-prompt_content="＞ω ＜/"
-PROMPT=$'%{\e[38;5;227m%}'$prompt_content$'%{\e[m%} '
+prompt_content="＞ω ＜/ "
+prompt2_content="8・) "
+PROMPT=$'%{\e[38;5;227m%}'$prompt_content$'%{\e[m%}'
+PROMPT2=$'%{\e[38;5;245m%}'$prompt2_content$'%{\e[m%}'
 
 ## History
 HISTFILE=~/.zsh_history
