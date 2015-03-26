@@ -5,6 +5,10 @@ if has('vim_starting')
     set nocompatible
   endif
 
+  if !isdirectory(expand("~/.vim/bundle/neobundle.vim/"))
+    :call system("git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim")
+  endif
+
   set runtimepath+=~/.vim/bundle/neobundle.vim
 endif
 
@@ -92,7 +96,9 @@ nnoremap <silent> ,nt :NERDTreeToggle<CR>
 " grep検索の実行後にQuickFix Listを表示
 autocmd QuickFixCmdPost *grep* cwindow
 " ステータス行にGitブランチを表示
-set statusline+=%{fugitive#statusline()}
+if isdirectory(expand("~/.vim/bundle/vim-fugitive"))
+  set statusline+=%{fugitive#statusline()}
+endif
 
 
 set encoding=utf-8
