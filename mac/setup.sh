@@ -15,8 +15,8 @@ set -e
 # Install Homebrew packages
 ${HOME}/dotfiles/mac/brew.sh
 
-# Link dotfiles
-${HOME}/dotfiles/common/link.sh
+# Create dotfiles
+${HOME}/dotfiles/common/create_dotfiles.sh
 
 # Install Ruby vi anyenv
 ${HOME}/dotfiles/common/install_ruby.sh
