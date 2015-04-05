@@ -53,6 +53,7 @@ brew cask install iterm2
 brew cask install adobe-reader
 brew cask install slack
 # brew cask install kobito
+brew cask install gimp
 
 brew cask alfred link
 
