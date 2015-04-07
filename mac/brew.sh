@@ -32,8 +32,7 @@ brew install jq
 brew install tree
 
 # Cask
-brew tap phinze/homebrew-cask
-brew install brew-cask
+brew install caskroom/cask/brew-cask
 
 brew cask install appcleaner
 brew cask install clipmenu
