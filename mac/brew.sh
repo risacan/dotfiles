@@ -30,6 +30,8 @@ brew install openssl libyaml libffi
 brew install ansible
 brew install jq
 brew install tree
+brew install libtool
+brew install htop
 
 # Cask
 brew install caskroom/cask/brew-cask
