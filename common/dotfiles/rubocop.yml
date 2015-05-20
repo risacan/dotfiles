@@ -1,0 +1,32 @@
+AllCops:
+  Exclude:
+    - "vendor/**/*"
+    - "jobs/test_job.rb"
+    - "tmp/*"
+  DisplayCopNames: true
+
+Documentation:
+  Enabled: false
+
+# 日本語のコメントを許可する
+Style/AsciiComments:
+  Enabled: false
+
+# ダブルクオーテーションの文字列を許可する
+Style/StringLiterals:
+  Enabled: false
+
+# raise Exception.new(msg) と fail Exception, msg のどちらも許可する
+Style/RaiseArgs:
+  Enabled: false
+
+# !!value のイディオムを許可する
+Style/DoubleNegation:
+  Enabled: false
+
+Style/GuardClause:
+  Enabled: false
+
+# メソッドの最大行数を15行に
+Metrics/MethodLength:
+  Max: 15
