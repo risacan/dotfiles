@@ -32,6 +32,8 @@ brew install jq
 brew install tree
 brew install libtool
 brew install htop
+brew install s3cmd
+brew install ffmpeg
 
 # Cask
 brew install caskroom/cask/brew-cask
