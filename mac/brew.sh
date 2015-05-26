@@ -59,8 +59,6 @@ brew cask install slack
 brew cask install gimp
 brew cask install macdown
 
-brew cask alfred link
-
 # Clean up old versions
 brew cleanup
 brew cask cleanup
