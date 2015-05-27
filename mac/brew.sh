@@ -34,6 +34,7 @@ brew install libtool
 brew install htop
 brew install s3cmd
 brew install ffmpeg
+brew install nkf
 
 # Cask
 brew install caskroom/cask/brew-cask
