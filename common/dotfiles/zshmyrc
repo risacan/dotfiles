@@ -100,3 +100,12 @@ alias cp='cp -i'
 alias mv='mv -i'
  
 alias mkdir='mkdir -p'
+
+alias bi='bundle install'
+alias bip='bundle install --path vendor/bundle'
+alias be='bundle exec'
+alias bu='bundle update'
+
+function p() {
+  ps -ef | grep $1 | grep -v grep
+}
