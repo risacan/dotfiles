@@ -105,6 +105,9 @@ alias bi='bundle install'
 alias bip='bundle install --path vendor/bundle'
 alias be='bundle exec'
 alias bu='bundle update'
+alias bruby='bundle exec ruby'
+alias brake='bundle exec rake'
+alias bpry='bundle exec pry'
 
 function p() {
   ps -ef | grep $1 | grep -v grep
