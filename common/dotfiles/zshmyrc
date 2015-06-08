@@ -108,6 +108,8 @@ alias bru='bundle exec ruby'
 alias bra='bundle exec rake'
 alias bp='bundle exec pry'
 
+alias ssh='cat ~/.ssh/conf.d/config ~/.ssh/conf.d/*.conf > ~/.ssh/config;ssh'
+
 function p() {
   ps -ef | grep $1 | grep -v grep
 }
