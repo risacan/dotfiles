@@ -36,6 +36,7 @@ brew install s3cmd
 brew install ffmpeg
 brew install nkf
 brew install sl
+brew install peco
 
 # Cask
 brew install caskroom/cask/brew-cask
