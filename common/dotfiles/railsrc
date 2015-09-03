@@ -1,1 +1,1 @@
--T --skip-bundle
+--skip-test-unit --skip-bundle --skip-spring
