@@ -17,7 +17,7 @@ colors
 #%# "
 #PROMPT="%{${fg[gray]}%}(・8・)%{${reset_color}%} "
 prompt_content="＞ω ＜/ "
-prompt2_content="8・) "
+prompt2_content='´╹◡╹`) '
 PROMPT=$'%{\e[38;5;227m%}'$prompt_content$'%{\e[m%}'
 PROMPT2=$'%{\e[38;5;245m%}'$prompt2_content$'%{\e[m%}'
 
