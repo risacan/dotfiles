@@ -16,6 +16,9 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 
+" 移動系
+NeoBundle 'easymotion/vim-easymotion'
+
 " コード補完
 "NeoBundle 'Shougo/neocomplete.vim'
 "NeoBundle 'Shougo/neocomplcache'
@@ -59,6 +62,12 @@ NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'slim-template/vim-slim'
 
 call neobundle#end()
+
+""""""""""""""""
+" Plugin 設定
+""""""""""""""""
+
+map <Leader> <Plug>(easymotion-prefix)
 
 " Rubocop
 """"""""""""""""
