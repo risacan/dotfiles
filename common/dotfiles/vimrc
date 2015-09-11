@@ -116,10 +116,10 @@ endif
 
 " Key Bind
 """"""""""""""""
-nnoremap <silent> ;wh <C-w>h
-nnoremap <silent> ;wj <C-w>j
-nnoremap <silent> ;wk <C-w>k
-nnoremap <silent> ;wl <C-w>l
+nnoremap <silent> ,wh <C-w>h
+nnoremap <silent> ,wj <C-w>j
+nnoremap <silent> ,wk <C-w>k
+nnoremap <silent> ,wl <C-w>l
 
 
 set encoding=utf-8
