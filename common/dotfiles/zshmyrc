@@ -98,6 +98,8 @@ alias lla='ls -al'
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
+
+alias vi='vim'
  
 alias mkdir='mkdir -p'
 
