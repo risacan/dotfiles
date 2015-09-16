@@ -104,6 +104,11 @@ nnoremap <silent> ;t :NERDTreeToggle<CR>
 " CtrlP
 """"""""""""""""
 nnoremap <silent> ;f :<C-u>CtrlP<CR>
+let g:ctrlp_prompt_mappings = {
+  \ 'AcceptSelection("h")': ['<c-cr>', '<c-s>'],
+  \ 'ToggleRegex()':        ['<c-x>'],
+  \ 'PrtClearCache()':      ['<c-r>'],
+  \ }
 
 " Git
 """"""""""""""""
