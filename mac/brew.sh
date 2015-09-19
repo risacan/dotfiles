@@ -38,6 +38,7 @@ brew install nkf
 brew install sl
 brew install peco
 brew install postgresql
+brew install watch
 
 # Cask
 brew install caskroom/cask/brew-cask

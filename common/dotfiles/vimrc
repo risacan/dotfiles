@@ -60,6 +60,7 @@ NeoBundle 'grep.vim'
 NeoBundle 'mrk21/yaml-vim'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'slim-template/vim-slim'
+NeoBundle 'fatih/vim-go'
 
 call neobundle#end()
 
