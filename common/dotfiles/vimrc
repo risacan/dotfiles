@@ -110,6 +110,9 @@ let g:ctrlp_prompt_mappings = {
   \ 'ToggleRegex()':        ['<c-x>'],
   \ 'PrtClearCache()':      ['<c-r>'],
   \ }
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/](\.git|node_modules)$'
+  \ }
 
 " Git
 """"""""""""""""
