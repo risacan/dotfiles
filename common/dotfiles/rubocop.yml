@@ -121,4 +121,4 @@ Style/StringLiterals:
 
 # 空カンマを許可する
 Style/TrailingComma:
-  EnforcedStyleForMultiline: comma
+  Enabled: false
