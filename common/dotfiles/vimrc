@@ -130,6 +130,9 @@ nnoremap <silent> ,wj <C-w>j
 nnoremap <silent> ,wk <C-w>k
 nnoremap <silent> ,wl <C-w>l
 
+" Auto Commands
+""""""""""""""""
+autocmd BufWritePre * :%s/\s\+$//ge
 
 set encoding=utf-8
 
