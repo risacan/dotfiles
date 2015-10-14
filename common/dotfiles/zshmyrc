@@ -3,15 +3,15 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 if [ ! -d ~/.zsh ]; then
   mkdir -p ~/.zsh
 fi
- 
+
 ## 補完機能を有効化
 autoload -Uz compinit
 compinit -u
- 
+
 ## 色を使う
 autoload -Uz colors
 colors
- 
+
 ## Prompt
 #PROMPT="[%{${fg[green]}%}%n%{${reset_color}%}@%{${fg[cyan]}%}%m%{${reset_color}%}] %~
 #%# "
@@ -20,6 +20,29 @@ prompt_content="＞ω ＜/ "
 prompt2_content='´╹◡╹`) '
 PROMPT=$'%{\e[38;5;227m%}'$prompt_content$'%{\e[m%}'
 PROMPT2=$'%{\e[38;5;245m%}'$prompt2_content$'%{\e[m%}'
+
+## 右プロンプト
+setopt transient_rprompt
+# setopt prompt_subst
+autoload -Uz vcs_info
+autoload -Uz add-zsh-hook
+
+zstyle ':vcs_info:*' formats '[%s(%b) by %m]'
+zstyle ':vcs_info:*' actionformats '[%s(%b|%a) by %m]'
+zstyle ':vcs_info:git+set-message:*' hooks git-config-user
+function +vi-git-config-user() { hook_com[misc]+=`git config user.email` }
+function _vcs_precmd() {
+  LANG=en_US.UTF-8 vcs_info
+  # 色の設定(灰色)
+  RPROMPT=$'%{\e[38;5;008m%}'
+  # カレントディレクトリ
+  RPROMPT+=%~
+  # Gitレポジトリ内であれば情報追加
+  [ -n "${vcs_info_msg_0_}" ] && RPROMPT+=' '${vcs_info_msg_0_}
+  # 色を元に戻す
+  RPROMPT+=$'%{\e[m%}'
+}
+add-zsh-hook precmd _vcs_precmd
 
 ## History
 HISTFILE=~/.zsh_history
@@ -31,7 +54,7 @@ setopt share_history
 setopt hist_ignore_all_dups
 ## コマンドの余分なスペースを削除する
 setopt hist_reduce_blanks
- 
+
 ## Directory
 ## ディレクトリ名でcdする
 setopt auto_cd
@@ -39,7 +62,7 @@ setopt auto_cd
 setopt auto_pushd
 ## 重複したディレクトリを追加しない
 setopt pushd_ignore_dups
- 
+
 ## 補完
 ## tabキーで補完候補を切り替える
 setopt auto_menu
@@ -55,7 +78,7 @@ zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin \
 ## コマンド補完
 bindkey "^P" history-beginning-search-backward
 bindkey "^N" history-beginning-search-forward
- 
+
 ## Other Options
 ## '#'以降をコメントとして扱う
 setopt interactive_comments
@@ -63,7 +86,7 @@ setopt interactive_comments
 setopt correct
 ## 全履歴の表示
 function history-all { history -E 1 }
- 
+
 ## Dircolors
 ################
 if [ ! -d ~/.zsh/dircolors-solarized ]; then
@@ -83,24 +106,24 @@ fi
 
 ## Aliases
 ################
- 
+
 case ${OSTYPE} in
 linux*)
   alias ls='ls --color' ;;
 darwin*)
   alias ls='gls --color' ;;
 esac
- 
+
 alias la='ls -a'
 alias ll='ls -l'
 alias lla='ls -al'
- 
+
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 
 alias vi='vim'
- 
+
 alias mkdir='mkdir -p'
 
 alias bi='bundle install'
