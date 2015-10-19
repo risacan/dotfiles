@@ -115,6 +115,9 @@ Style/SpaceAroundOperators:
     - "=>"
     - "||="
 
+Style/SpaceBeforeComma:
+  Enabled: false
+
 # 文字列はダブルクォートに統一する
 Style/StringLiterals:
   EnforcedStyle: double_quotes
