@@ -28,6 +28,7 @@ brew install openssl libyaml libffi
 
 # packages
 brew install ansible
+brew install fzf
 brew install jq
 brew install tree
 brew install libtool
