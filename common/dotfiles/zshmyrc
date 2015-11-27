@@ -2,9 +2,9 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 
 case ${OSTYPE} in
 linux*)
-  os_type="linux"
+  os_type="linux" ;;
 darwin*)
-  os_type="mac"
+  os_type="mac" ;;
 esac
 
 export os_type
