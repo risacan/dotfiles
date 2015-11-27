@@ -39,6 +39,7 @@ brew install nkf
 brew install sl
 brew install peco
 brew install postgresql
+brew install tmux
 brew install watch
 
 # Cask
