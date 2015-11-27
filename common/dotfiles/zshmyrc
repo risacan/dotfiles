@@ -150,3 +150,10 @@ alias ssh='cat ~/.ssh/conf.d/config ~/.ssh/conf.d/*.conf > ~/.ssh/config;ssh'
 function p() {
   ps -ef | grep $1 | grep -v grep
 }
+
+## Includes
+##################
+
+if type fzf > /dev/null; then
+  source ~/.zsh.d/fzf
+fi
