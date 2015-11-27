@@ -1,5 +1,14 @@
 fpath=(/usr/local/share/zsh-completions $fpath)
 
+case ${OSTYPE} in
+linux*)
+  os_type="linux"
+darwin*)
+  os_type="mac"
+esac
+
+export os_type
+
 if [ ! -d ~/.zsh ]; then
   mkdir -p ~/.zsh
 fi
@@ -93,10 +102,10 @@ if [ ! -d ~/.zsh/dircolors-solarized ]; then
   git clone git://github.com/seebi/dircolors-solarized ~/.zsh/dircolors-solarized
 fi
 
-case ${OSTYPE} in
-linux*)
+case ${os_type} in
+linux)
   eval $(dircolors ~/.zsh/dircolors-solarized/dircolors.ansi-universal) ;;
-darwin*)
+mac)
   eval $(gdircolors ~/.zsh/dircolors-solarized/dircolors.ansi-universal) ;;
 esac
 
@@ -107,10 +116,10 @@ fi
 ## Aliases
 ################
 
-case ${OSTYPE} in
-linux*)
+case ${os_type} in
+linux)
   alias ls='ls --color' ;;
-darwin*)
+mac)
   alias ls='gls --color' ;;
 esac
 
