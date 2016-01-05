@@ -1,12 +1,16 @@
 fpath=(/usr/local/share/zsh-completions $fpath)
 
+## Environments
+################
+
+export EDITOR=$(which vim)
+
 case ${OSTYPE} in
 linux*)
   os_type="linux" ;;
 darwin*)
   os_type="mac" ;;
 esac
-
 export os_type
 
 if [ ! -d ~/.zsh ]; then
@@ -135,6 +139,7 @@ alias vi='vim'
 
 alias mkdir='mkdir -p'
 
+# bundle
 alias bi='bundle install'
 alias be='bundle exec'
 alias bu='bundle update'
@@ -143,6 +148,9 @@ alias bru='bundle exec ruby'
 alias bra='bundle exec rake'
 alias bp='bundle exec pry'
 
+# git
+alias gicp='git cherry-pick'
+
 alias diff='diff -u'
 
 alias ssh='cat ~/.ssh/conf.d/config ~/.ssh/conf.d/*.conf > ~/.ssh/config;ssh'
@@ -150,6 +158,8 @@ alias ssh='cat ~/.ssh/conf.d/config ~/.ssh/conf.d/*.conf > ~/.ssh/config;ssh'
 function p() {
   ps -ef | grep $1 | grep -v grep
 }
+
+
 
 ## Includes
 ##################
