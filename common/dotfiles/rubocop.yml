@@ -6,6 +6,8 @@ AllCops:
   Exclude:
     - "vendor/**/*"
     - "tmp/*"
+    - "config/deploy.rb"
+    - "config/deploy/*"
   DisplayCopNames: true
 
 Documentation:
