@@ -3,11 +3,13 @@
 #   https://github.com/serverkit/serverkit/blob/master/.rubocop.yml
 
 AllCops:
+  TargetRubyVersion: 2.3
   Exclude:
-    - "vendor/**/*"
-    - "tmp/*"
-    - "config/deploy.rb"
-    - "config/deploy/*"
+    - "**/Capfile"
+    - "**/vendor/**/*"
+    - "**/tmp/*"
+    - "**/config/deploy.rb"
+    - "**/config/deploy/*"
   DisplayCopNames: true
 
 Documentation:
@@ -110,20 +112,14 @@ Style/SignalException:
 Style/SingleLineBlockParams:
   Enabled: false
 
-# ||=もalignに使うことがあるので複数空白を許可する
+# アライメント用の連続スペースを許可する
 Style/SpaceAroundOperators:
-  MultiSpaceAllowedForOperators:
-    - "="
-    - "=>"
-    - "||="
-
-Style/SpaceBeforeComma:
-  Enabled: false
+  AllowForAlignment: true
 
 # 文字列はダブルクォートに統一する
 Style/StringLiterals:
   EnforcedStyle: double_quotes
 
-# 空カンマを許可する
-Style/TrailingComma:
+# ArrayリテラルとHashリテラルの末尾の空カンマを許可する
+Style/TrailingCommaInLiteral:
   Enabled: false
