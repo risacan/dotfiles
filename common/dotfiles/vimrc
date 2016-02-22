@@ -61,6 +61,7 @@ NeoBundle 'mrk21/yaml-vim'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'slim-template/vim-slim'
 NeoBundle 'fatih/vim-go'
+NeoBundle 'elixir-lang/vim-elixir'
 
 call neobundle#end()
 
