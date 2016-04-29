@@ -41,6 +41,8 @@ brew install peco
 brew install postgresql
 brew install tmux
 brew install watch
+brew install watchman
+brew install flow
 
 # Cask
 brew install caskroom/cask/brew-cask
@@ -65,6 +67,9 @@ brew cask install slack
 # brew cask install kobito
 brew cask install gimp
 brew cask install macdown
+brew cask install xquartz
+
+brew install wine # It requires xquartz
 
 # Clean up old versions
 brew cleanup
