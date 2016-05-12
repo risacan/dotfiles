@@ -19,8 +19,11 @@ EOF
   brew upgrade
 fi
 
+# Core
+brew install coreutils
+
 # Zsh
-brew install zsh --disable-etcdir
+brew install zsh --without-etcdir
 brew install zsh-completions
 
 # for Ruby
@@ -29,7 +32,16 @@ brew install openssl libyaml libffi
 # packages
 brew install ansible
 brew install fzf
+brew install ghq
+brew install git-flow
+brew install imagemagick
 brew install jq
+brew install libmagic
+brew install libxml2
+brew install libxslt
+brew install mongodb
+brew install mysql
+brew install redis
 brew install tree
 brew install libtool
 brew install htop
@@ -43,15 +55,17 @@ brew install tmux
 brew install watch
 brew install watchman
 brew install flow
+brew install vitorgalvao/tiny-scripts/cask-repair
 
 # Cask
 brew install caskroom/cask/brew-cask
 
 brew cask install appcleaner
+brew cask install atom
 brew cask install clipmenu
 #brew cask install keyremap4macbook
 brew cask install bettertouchtool
-#brew cask install virtualbox
+brew cask install virtualbox
 brew cask install vagrant
 brew cask install xtrafinder
 brew cask install skype

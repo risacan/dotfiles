@@ -92,6 +92,8 @@ zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin \
 bindkey "^P" history-beginning-search-backward
 bindkey "^N" history-beginning-search-forward
 
+bindkey -e
+
 ## Other Options
 ## '#'以降をコメントとして扱う
 setopt interactive_comments
