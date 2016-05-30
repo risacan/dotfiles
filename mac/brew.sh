@@ -31,6 +31,7 @@ brew install openssl libyaml libffi
 
 # packages
 brew install ansible
+brew install byobu
 brew install fzf
 brew install ghq
 brew install git-flow
