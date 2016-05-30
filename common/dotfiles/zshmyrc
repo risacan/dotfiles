@@ -179,8 +179,8 @@ peco-src() {
 }
 zle -N peco-src
 
+## キーバインド
 bindkey -e
-bindkey '^]' peco-src
 bindkey "^P" history-beginning-search-backward
 bindkey "^N" history-beginning-search-forward
-
+bindkey '^]' peco-src

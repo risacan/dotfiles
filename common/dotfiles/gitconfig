@@ -1,0 +1,9 @@
+[ghq]
+	root = /Users/nownabe/src
+[user]
+	name = nownabe
+	email = nownabe@goodpatch.com
+[push]
+	default = simple
+[alias]
+  logg = log --graph --oneline --all --decorate
