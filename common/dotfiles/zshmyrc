@@ -88,11 +88,6 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 ## sudoでも補完
 zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin \
 /usr/sbin /usr/bin /sbin /bin /usr/X11R6/bin
-## コマンド補完
-bindkey "^P" history-beginning-search-backward
-bindkey "^N" history-beginning-search-forward
-
-bindkey -e
 
 ## Other Options
 ## '#'以降をコメントとして扱う
@@ -183,4 +178,9 @@ peco-src() {
     zle reset-prompt
 }
 zle -N peco-src
+
+bindkey -e
 bindkey '^]' peco-src
+bindkey "^P" history-beginning-search-backward
+bindkey "^N" history-beginning-search-forward
+
