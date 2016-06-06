@@ -57,6 +57,7 @@ brew install watch
 brew install watchman
 brew install flow
 brew install vitorgalvao/tiny-scripts/cask-repair
+brew install wget
 
 # Cask
 brew install caskroom/cask/brew-cask
