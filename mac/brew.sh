@@ -59,6 +59,9 @@ brew install flow
 brew install vitorgalvao/tiny-scripts/cask-repair
 brew install wget
 
+brew tap cloudfoundry/tap
+brew install cf-cli
+
 # Cask
 brew install caskroom/cask/brew-cask
 
