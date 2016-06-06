@@ -35,6 +35,7 @@ brew install byobu
 brew install fzf
 brew install ghq
 brew install git-flow
+brew install highlight
 brew install imagemagick
 brew install jq
 brew install libmagic
@@ -61,6 +62,11 @@ brew install wget
 
 brew tap cloudfoundry/tap
 brew install cf-cli
+
+brew tap sanemat/font
+brew install ricty
+# cp -f /usr/local/Cellar/ricty/3.2.4/share/fonts/Ricty*.ttf ~/Library/Fonts/
+# fc-cache -vf
 
 # Cask
 brew install caskroom/cask/brew-cask
