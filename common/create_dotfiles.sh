@@ -17,3 +17,4 @@ cp -n ${HOME}/dotfiles/common/zshrc ${HOME}/.zshrc
 # Vim
 mkdir -p ${HOME}/{.vim,.vimbackup}
 ln -s ${dotfiles_common}/vim-indent ${HOME}/.vim/indent
+ln -s ${dotfiles_common}/vim-ftplugin ${HOME}/.vim/ftplugin
