@@ -1,4 +1,5 @@
 filetype off
+filetype plugin indent off
 
 if has('vim_starting')
   if &compatible
@@ -25,7 +26,9 @@ NeoBundle 'easymotion/vim-easymotion'
 "NeoBundle 'marcus/rsense'
 "NeoBundle 'supermomonga/neocomplete-rsense.vim'
 NeoBundle 'Townk/vim-autoclose'
-NeoBundle 'tpope/vim-endwise'
+"NeoBundle 'tpope/vim-endwise'
+NeoBundle 'kana/vim-smartinput'
+NeoBundle 'cohama/vim-smartinput-endwise'
 
 " 静的解析
 NeoBundle 'scrooloose/syntastic'
@@ -63,9 +66,15 @@ NeoBundle 'slim-template/vim-slim'
 NeoBundle 'fatih/vim-go'
 NeoBundle 'elixir-lang/vim-elixir'
 NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'jelera/vim-javascript-syntax'
+"NeoBundle 'jelera/vim-javascript-syntax'
 NeoBundle 'leshill/vim-json'
 NeoBundle 'digitaltoad/vim-jade'
+"NeoBundle 'othree/yajs.vim'
+
+" JavaScript
+NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'mxw/vim-jsx'
+NeoBundle 'gavocanov/vim-js-indent'
 
 call neobundle#end()
 
@@ -74,6 +83,11 @@ call neobundle#end()
 """"""""""""""""
 
 map ;w <Plug>(easymotion-w)
+
+" smartinput
+""""""""""""""""
+call smartinput_endwise#define_default_rules()
+
 
 " Rubocop
 """"""""""""""""
@@ -127,6 +141,10 @@ autocmd QuickFixCmdPost *grep* cwindow
 if isdirectory(expand("~/.vim/bundle/vim-fugitive"))
   set statusline+=%{fugitive#statusline()}
 endif
+
+" Languages
+""""""""""""""""
+let g:jsx_ext_required = 0
 
 " Key Bind
 """"""""""""""""
