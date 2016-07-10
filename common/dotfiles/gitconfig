@@ -7,3 +7,5 @@
 	default = simple
 [alias]
   logg = log --graph --oneline --all --decorate
+[commit]
+	template = /Users/nownabe/.git.d/commit_message

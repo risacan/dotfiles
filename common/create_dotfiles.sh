@@ -2,7 +2,7 @@
 
 set -x
 
-dotfiles_base=${HOME}/dotfiles
+dotfiles_base=${HOME}/src/github.com/nownabe/dotfiles
 dotfiles_common=${dotfiles_base}/common
 
 dotfiles_dir=${dotfiles_common}/dotfiles

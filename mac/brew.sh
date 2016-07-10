@@ -35,6 +35,7 @@ brew install byobu
 brew install fzf
 brew install ghq
 brew install git-flow
+brew install highlight
 brew install imagemagick
 brew install jq
 brew install libmagic
@@ -44,6 +45,7 @@ brew install mongodb
 brew install mysql
 brew install redis
 brew install tree
+brew install ttyrec
 brew install libtool
 brew install htop
 brew install s3cmd
@@ -57,6 +59,20 @@ brew install watch
 brew install watchman
 brew install flow
 brew install vitorgalvao/tiny-scripts/cask-repair
+brew install wget
+
+# for byobu
+brew install newt
+# mkdir -p /Users/nownabe/Library/Python/2.7/lib/python/site-packages
+# echo 'import site; site.addsitedir("/usr/local/lib/python2.7/site-packages")' >> /Users/nownabe/Library/Python/2.7/lib/python/site-packages/homebrew.pth
+
+brew tap cloudfoundry/tap
+brew install cf-cli
+
+brew tap sanemat/font
+brew install ricty
+# cp -f /usr/local/Cellar/ricty/3.2.4/share/fonts/Ricty*.ttf ~/Library/Fonts/
+# fc-cache -vf
 
 # Cask
 brew install caskroom/cask/brew-cask
