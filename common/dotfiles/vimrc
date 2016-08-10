@@ -70,11 +70,14 @@ NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'leshill/vim-json'
 NeoBundle 'digitaltoad/vim-jade'
 "NeoBundle 'othree/yajs.vim'
+NeoBundle 'rust-lang/rust.vim'
 
 " JavaScript
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'mxw/vim-jsx'
 NeoBundle 'gavocanov/vim-js-indent'
+
+NeoBundle 'altercation/vim-colors-solarized'
 
 call neobundle#end()
 
