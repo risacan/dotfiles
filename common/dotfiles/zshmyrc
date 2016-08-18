@@ -184,3 +184,5 @@ bindkey -e
 bindkey "^P" history-beginning-search-backward
 bindkey "^N" history-beginning-search-forward
 bindkey '^]' peco-src
+
+alias clean-branch="git branch | egrep -v 'master|develop|\*' | xargs git branch -d"
