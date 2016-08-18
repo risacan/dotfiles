@@ -32,6 +32,7 @@ brew install openssl libyaml libffi
 # packages
 brew install ansible
 brew install byobu
+brew install cmake
 brew install fzf
 brew install ghq
 brew install git-flow
@@ -47,8 +48,8 @@ brew install redis
 brew install tree
 brew install ttyrec
 brew install libtool
-brew install htop
-brew install s3cmd
+# brew install htop
+# brew install s3cmd
 brew install ffmpeg
 brew install nkf
 brew install sl
@@ -75,7 +76,7 @@ brew install ricty
 # fc-cache -vf
 
 # Cask
-brew install caskroom/cask/brew-cask
+# brew install caskroom/cask/brew-cask
 
 brew cask install appcleaner
 brew cask install atom
