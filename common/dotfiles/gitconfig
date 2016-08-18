@@ -9,3 +9,9 @@
   logg = log --graph --oneline --all --decorate
 [commit]
 	template = /Users/nownabe/.git.d/commit_message
+[diff]
+	compactionHeuristic = true
+[pager]
+	log = diff-highlight | emojify | less -r
+	show = diff-highlight | emojify | less -r
+	diff = diff-highlight | emojify | less -r
