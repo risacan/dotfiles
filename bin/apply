@@ -12,10 +12,11 @@ basedir=$rootdir/dotfiles
 # Make directories
 for dir in $(find $basedir -type d | grep -v "$basedir\$"); do
   dir=$(echo $dir | sed "s#^$basedir#$HOME#")
-  echo "Check $dir"
+  echo -n "Check $dir ..."
   if [[ -d $dir ]]; then
-    echo "  OK"
+    echo " OK!"
   else
+    echo
     echo "  Missing $dir"
     mkdir -p $dir
     echo_g "  Created $dir"
@@ -25,12 +26,14 @@ done
 # Make dotfile links
 for src in $(find $basedir -type f); do
   target=$(echo $src | sed "s#^$basedir#$HOME#")
-  echo "Check $target"
+  echo -n "Check $target ..."
 
   if [[ -L $target ]]; then
-    echo "  OK"
+    echo " OK"
     continue
   fi
+
+  echo
 
   if [[ -f $target ]]; then
     echo "  Already exist but it's not a link"
