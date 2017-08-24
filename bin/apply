@@ -10,7 +10,7 @@ rootdir=$(dirname $(cd $(dirname $0) && pwd))
 basedir=$rootdir/dotfiles
 
 # Make directories
-for dir in $(find $basedir -type d | grep -v $basedir); do
+for dir in $(find $basedir -type d | grep -v "$basedir\$"); do
   dir=$(echo $dir | sed "s#^$basedir#$HOME#")
   echo "Check $dir"
   if [[ -d $dir ]]; then
