@@ -1,5 +1,0 @@
-export PATH="$HOME/.anyenv/bin:/usr/local/bin:$PATH"
-eval "$(anyenv init -)"
-export PATH="$HOME/.embulk/bin:$PATH"
-export PATH="/Users/swatanabe/tmp/playground:$PATH"
-export PATH="$HOME/.embulk/bin:$PATH"
