@@ -6,12 +6,8 @@ scriptencoding utf-8
 
 language message C
 
+filetype off
+filetype plugin indent off
+
 let g:mapleader = '\<Space>'
 let g:maplocalleader = ','
-
-set packpath=
-
-if has('multi_byte_ime')
-  set iminsert=0
-  set imsearch=0
-endif

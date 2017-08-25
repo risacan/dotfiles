@@ -16,4 +16,12 @@ endfunction
 
 call s:load_config('base')
 call s:load_config('dein')
+call s:load_config('options')
+call s:load_config('keymap')
 
+if has('nvim')
+  call s:load_config('denite')
+endif
+
+syntax enable
+filetype plugin indent on

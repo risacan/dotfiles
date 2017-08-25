@@ -27,6 +27,10 @@ call dein#begin(s:base)
 
 call s:load('base')
 
+if has('nvim')
+  call s:load('nvim')
+endif
+
 call dein#end()
 
 call dein#save_state()
