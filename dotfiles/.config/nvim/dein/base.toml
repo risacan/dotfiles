@@ -1,2 +1,16 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'cocopon/iceberg.vim'
+hook_add = '''
+  set background=dark
+  autocmd VimEnter * nested colorscheme iceberg
+'''
+
+[[plugins]]
+repo = 'vim-airline/vim-airline'
+depends = ['vim-airline/vim-airline']
+
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
