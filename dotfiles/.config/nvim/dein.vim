@@ -38,3 +38,6 @@ call dein#save_state()
 if has('vim_starting') && dein#check_install()
   call dein#install()
 endif
+
+" Denite.vim
+call denite#custom#option('default', 'prompt', '>')

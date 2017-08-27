@@ -9,5 +9,10 @@ language message C
 filetype off
 filetype plugin indent off
 
-let g:mapleader = '\<Space>'
+let g:python3_host_prog = expand($PYENV_ROOT . '/shims/python3')
+
+let g:mapleader = "\<Space>"
 let g:maplocalleader = ','
+
+nnoremap "\<Space>" <Nop>
+nnoremap ',' <Nop>
