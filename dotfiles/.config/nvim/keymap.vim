@@ -22,3 +22,4 @@ call denite#custom#map('normal', 'jj', '<denite:quit>')
 
 nnoremap <silent> <Leader>ff :Denite file_rec<CR>
 nnoremap <silent> <Leader>fb :Denite buffer<CR>
+nnoremap <silent> <Leader>fn :Denite file file:new<CR>
