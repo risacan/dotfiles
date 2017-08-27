@@ -8,9 +8,12 @@ nnoremap <silent> <Leader>wk <C-w>k
 nnoremap <silent> <Leader>wl <C-w>l
 
 " denite.nvim
-if executable('ag')
-  "call denite#custom#var('grep', 'command', ['ag'])
-  "call denite#custom#var('file_rec', 'command', ['ag', '--follow', '-g', ''])
+if executable('rg')
+  call denite#custom#var('file_rec', 'command',
+    \ ['rg', '--files', '--hidden', '--glob', '!.git'])
+else
+  call denite#custom#var('file_rec', 'command',
+    \ ['ag', '--follow', '--nocolor', '--nogroup', '--hidden', '-g', '--ignore', '.git', ''])
 endif
 
 call denite#custom#map('insert', '<C-j>', '<denite:move_to_next_line>')
