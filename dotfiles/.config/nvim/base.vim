@@ -16,3 +16,9 @@ let g:maplocalleader = ','
 
 nnoremap "\<Space>" <Nop>
 nnoremap ',' <Nop>
+
+set background=dark
+augroup MyColor
+  autocmd!
+  autocmd VimEnter * nested colorscheme default
+augroup END

@@ -18,7 +18,6 @@ set showmatch   " Emphasize brackets
 
 set cmdheight=1     " height of command line
 set laststatus=2    " ステータスラインをエディタウィンドウの末尾から1行目に常に表示
-set background=dark " 暗い背景色用の配色
 
 set tabstop=2     " Width of TAB
 set shiftwidth=2  " 自動インデントの幅

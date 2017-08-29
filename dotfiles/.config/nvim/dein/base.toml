@@ -3,9 +3,12 @@ repo = 'Shougo/dein.vim'
 
 [[plugins]]
 repo = 'cocopon/iceberg.vim'
+if = "!has('mac')"
 hook_add = '''
-  set background=dark
-  autocmd VimEnter * nested colorscheme iceberg
+  augroup MyColor
+    autocmd!
+    autocmd VimEnter * nested colorscheme iceberg
+  augroup END
 '''
 
 [[plugins]]
