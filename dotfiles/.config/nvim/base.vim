@@ -22,3 +22,5 @@ augroup MyColor
   autocmd!
   autocmd VimEnter * nested colorscheme default
 augroup END
+
+autocmd BufWritePre * :%s/\s\+$//ge
