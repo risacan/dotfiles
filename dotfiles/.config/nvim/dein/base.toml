@@ -34,3 +34,7 @@ hook_add = '''
   let g:ale_set_loclist = 0
   let g:ale_set_quickfix = 0
 '''
+
+[[plugins]]
+repo = 'leafgarland/typescript-vim'
+
