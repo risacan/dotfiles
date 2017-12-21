@@ -100,6 +100,7 @@ brew cask install slack
 brew cask install gimp
 brew cask install macdown
 brew cask install xquartz
+brew cask install mojibar
 
 brew install wine # It requires xquartz
 
